@@ -9,10 +9,18 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 
 public class Analyst extends Employee {
 
-    public Analyst(String name, String surname, int age, int exp, int salary) {
+    String position;
+
+    public Analyst(String name, String surname, Integer age, Integer exp, Integer salary) {
 
         super(name,surname,age,exp,salary);
+        position="Analyst";
 
+    }
+
+    @Override
+    public String toString() {
+        return "Analyst "+super.toString();
     }
 
 }

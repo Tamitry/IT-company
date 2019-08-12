@@ -2,6 +2,7 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.validation;
 
 /**
  * Static class for сhecking value of various class fields.
+ *
  * @author Dzmitri Tarlikovski
  * date 05.08.2019
  * @version  1.0
@@ -14,6 +15,11 @@ public final class Validator {
 
     }
 
+    /**
+     * Is the line valid?
+     * @param str - line
+     * @return - true & false
+     */
     public boolean validate(String str) {
 
             String[] sepStr = str.split(" ", 5);

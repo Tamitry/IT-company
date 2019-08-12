@@ -9,7 +9,18 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
  */
 
 public class Viser extends Employee {
-    public Viser(String name, String surname, int age, int exp, int salary) {
+
+    String position;
+
+    public Viser(String name, String surname, Integer age, Integer exp, Integer salary) {
+
         super(name,surname,age,exp,salary);
+        position = "Viser";
+
+    }
+
+    @Override
+    public String toString() {
+        return "Viser "+super.toString();
     }
 }

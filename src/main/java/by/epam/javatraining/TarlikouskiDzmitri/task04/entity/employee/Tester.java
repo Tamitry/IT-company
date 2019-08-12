@@ -9,8 +9,18 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 
 public class Tester extends Employee {
 
-    public Tester(String name, String surname, int age, int exp, int salary) {
+    String position;
+
+    public Tester(String name, String surname, Integer age, Integer exp, Integer salary) {
+
         super(name,surname,age,exp,salary);
+        position = "Tester";
+
+    }
+
+    @Override
+    public String toString() {
+        return "Tester "+super.toString();
     }
 
 }

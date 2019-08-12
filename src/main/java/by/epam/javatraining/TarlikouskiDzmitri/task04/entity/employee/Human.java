@@ -7,13 +7,13 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
  * @version  1.0
  */
 
-public class Human {
+public abstract class Human {
 
     private String name;
     private String surname;
     private int age;
 
-    public Human (String name, String surname, int age) {
+    public Human (String name, String surname, Integer age) {
 
         this.name=name;
         this.surname=surname;
@@ -67,7 +67,7 @@ public class Human {
         this.surname = surname;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
