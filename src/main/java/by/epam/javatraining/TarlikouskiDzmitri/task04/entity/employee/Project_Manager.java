@@ -29,7 +29,7 @@ public class Project_Manager extends Employee{
 
     @Override
     public int hashCode() {
-        return getFullName().length()*100000+getAge()*10000+getSalary()*100+getExp()*10000000+amOfPrevProject;
+        return getFullName().length()*10000000+getAge()*1000000+getSalary()*10000+getExp()+amOfPrevProject;
     }
 
     @Override
