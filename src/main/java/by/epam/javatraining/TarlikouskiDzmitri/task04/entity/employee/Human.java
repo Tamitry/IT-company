@@ -13,6 +13,10 @@ public abstract class Human {
     private String surname;
     private int age;
 
+    public Human() {
+
+    }
+
     public Human (String name, String surname, Integer age) {
 
         this.name=name;

@@ -9,18 +9,53 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 
 public class Project_Manager extends Employee{
 
-    String position;
+    int amOfPrevProject;
 
-    public Project_Manager(String name, String surname, Integer age, Integer exp, Integer salary) {
+    public Project_Manager() {
+
+    }
+
+    public Project_Manager(String name, String surname, Integer age, Integer exp, Integer salary, int amOfPrevProject) {
 
         super(name,surname,age,exp,salary);
-        position = "Project manager";
+        this.amOfPrevProject=amOfPrevProject;
 
     }
 
     @Override
     public String toString() {
-        return "Project manager "+super.toString();
+        return "Project manager "+super.toString()+", amount of previous project -"+amOfPrevProject;
+    }
+
+    @Override
+    public int hashCode() {
+        return getFullName().length()*100000+getAge()*10000+getSalary()*100+getExp()*10000000+amOfPrevProject;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(this==o) {
+            return true;
+        }
+        if(!(o instanceof Project_Manager)||o==null) {
+            return false;
+        }
+
+        Project_Manager manager = (Project_Manager) o;
+        if(getFullName().equals(manager.getFullName())&&getAge()==manager.getAge()&&getExp()==manager.getExp()&&
+                getSalary()==manager.getSalary()&& amOfPrevProject ==manager.getAmOfPrevProject()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public int getAmOfPrevProject() {
+        return amOfPrevProject;
+    }
+
+    public void setAmOfPrevProject(int amOfPrevProject) {
+        this.amOfPrevProject = amOfPrevProject;
     }
 
 }

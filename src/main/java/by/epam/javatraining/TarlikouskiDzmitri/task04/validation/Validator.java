@@ -1,5 +1,7 @@
 package by.epam.javatraining.TarlikouskiDzmitri.task04.validation;
 
+import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
+
 /**
  * Static class for сhecking value of various class fields.
  *
@@ -20,7 +22,7 @@ public final class Validator {
      * @param str - line
      * @return - true & false
      */
-    public boolean validate(String str) {
+    public boolean validate(String str) throws NotAvailableTypeOfEmployee {
 
             String[] sepStr = str.split(" ", 5);
 

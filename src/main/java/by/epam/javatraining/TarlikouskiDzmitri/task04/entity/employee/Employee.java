@@ -7,10 +7,14 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
  * @version  1.0
  */
 
-public class Employee extends Human {
+public abstract class Employee extends Human {
 
     int exp;     //work expirience in years
     int salary;  //man hours salary in dollars
+
+    public Employee() {
+
+    }
 
     public Employee(String name, String surname, Integer age, Integer exp, Integer salary) {
 
@@ -43,30 +47,8 @@ public class Employee extends Human {
     @Override
     public String toString() {
 
-        return " : full name - "+getFullName()+", age - "+getAge()+", experience - "+exp+", salary -"+salary;
+        return " : full name - "+getFullName()+", age - "+getAge()+", experience - "+exp+", salary -"+salary+", ";
 
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if(this==o) {
-            return true;
-        }
-        if(!(o instanceof Employee)||o==null) {
-            return false;
-        }
-
-        Employee employee = (Employee)o;
-        if(getFullName().equals(employee.getFullName())&&getAge()==employee.getAge()&&getExp()==employee.getExp()&&
-        getSalary()==employee.getSalary()) {
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public int hashCode() {
-        return getFullName().length()*100000+getAge()*10000+getSalary()*10+getExp();
-    }
 }

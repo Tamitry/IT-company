@@ -14,29 +14,25 @@ import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Employee;
 
 public class SortClass {
 
-    private AgeComparator ageComparator;
-    private ExperienceComparator experienceComparator;
-    private NameComparator nameComparator;
-    private SalaryComparator salaryComparator;
-    private SurnameComparator surnameComparator;
-
     public SortClass() {
 
-        ageComparator = new AgeComparator();
-        experienceComparator = new ExperienceComparator();
-        nameComparator = new NameComparator();
-        salaryComparator = new SalaryComparator();
-        surnameComparator = new SurnameComparator();
 
     }
 
-    public void sortSurname(TeamMembers teamMembers) {
+    /**
+     * Sort employees.
+     *
+     * @param comparator - which one you would use.
+     * @param teamMembers - collection with employees
+     */
+
+    public void sortEmployees(IEmployeeComparator comparator, TeamMembers teamMembers) {
 
         int size = teamMembers.numberOfEmployees();
 
         for(int i=0;i<size-1;i++) {
             for(int j=i+1;j<size;j++) {
-                if(surnameComparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
+                if(comparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
                     Employee temp = teamMembers.getEmployee(j-1);
                     teamMembers.setEmployees(j-1, teamMembers.getEmployee(j));
                     teamMembers.setEmployees(j,temp);
@@ -45,63 +41,4 @@ public class SortClass {
         }
     }
 
-    public void sortAge(TeamMembers teamMembers) {
-
-        int size = teamMembers.numberOfEmployees();
-
-        for(int i=0;i<size-1;i++) {
-            for(int j=i+1;j<size;j++) {
-                if(ageComparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
-                    Employee temp = teamMembers.getEmployee(j-1);
-                    teamMembers.setEmployees(j-1, teamMembers.getEmployee(j));
-                    teamMembers.setEmployees(j,temp);
-                }
-            }
-        }
-    }
-
-    public void sortSalary(TeamMembers teamMembers) {
-
-        int size = teamMembers.numberOfEmployees();
-
-        for(int i=0;i<size-1;i++) {
-            for(int j=i+1;j<size;j++) {
-                if(salaryComparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
-                    Employee temp = teamMembers.getEmployee(j-1);
-                    teamMembers.setEmployees(j-1, teamMembers.getEmployee(j));
-                    teamMembers.setEmployees(j,temp);
-                }
-            }
-        }
-    }
-
-    public void sortExperience(TeamMembers teamMembers) {
-
-        int size = teamMembers.numberOfEmployees();
-
-        for(int i=0;i<size-1;i++) {
-            for(int j=i+1;j<size;j++) {
-                if(experienceComparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
-                    Employee temp = teamMembers.getEmployee(j-1);
-                    teamMembers.setEmployees(j-1, teamMembers.getEmployee(j));
-                    teamMembers.setEmployees(j,temp);
-                }
-            }
-        }
-    }
-
-    public void sortName(TeamMembers teamMembers) {
-
-        int size = teamMembers.numberOfEmployees();
-
-        for(int i=0;i<size-1;i++) {
-            for(int j=i+1;j<size;j++) {
-                if(nameComparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
-                    Employee temp = teamMembers.getEmployee(j-1);
-                    teamMembers.setEmployees(j-1, teamMembers.getEmployee(j));
-                    teamMembers.setEmployees(j,temp);
-                }
-            }
-        }
-    }
 }

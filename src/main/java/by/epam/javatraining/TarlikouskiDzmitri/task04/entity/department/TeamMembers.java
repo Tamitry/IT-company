@@ -43,22 +43,6 @@ public class TeamMembers {
         return employees.isEmpty();
     }
 
-    /**
-     * Return the sum of all salaries.
-     *
-     * @return
-     */
-    public int sumSalary() {
-
-        int sum = 0;
-
-        for(Employee employee: employees) {
-            sum+=employee.getSalary();
-        }
-
-        return sum;
-    }
-
     @Override
     public String toString() {
 
@@ -96,6 +80,19 @@ public class TeamMembers {
         }
 
         return flag;
+    }
+
+    @Override
+    public int hashCode() {
+
+        int size = numberOfEmployees();
+        int sum=0;
+
+        for(int i=0;i<size;i++) {
+            sum+=employees.get(i).hashCode()/(i*100);
+        }
+
+        return sum+size;
     }
 
 }

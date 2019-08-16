@@ -1,5 +1,7 @@
 package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 
+import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.TestType;
+
 /**
  * Class of testers. There can be other methods, but now it just has
  * @author Dzmitri Tarlikovski
@@ -9,12 +11,16 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 
 public class Tester extends Employee {
 
-    String position;
+    TestType testType;
 
-    public Tester(String name, String surname, Integer age, Integer exp, Integer salary) {
+    public Tester() {
+
+    }
+
+    public Tester(String name, String surname, Integer age, Integer exp, Integer salary, TestType testType) {
 
         super(name,surname,age,exp,salary);
-        position = "Tester";
+        this.testType=testType;
 
     }
 
@@ -23,4 +29,42 @@ public class Tester extends Employee {
         return "Tester "+super.toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(this==o) {
+            return true;
+        }
+        if(!(o instanceof Tester)||o==null) {
+            return false;
+        }
+
+        Tester tester = (Tester) o;
+        if(getFullName().equals(tester.getFullName())&&getAge()==tester.getAge()&&getExp()==tester.getExp()&&
+                getSalary()==tester.getSalary()&& testType ==tester.getTestType()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+
+        switch (testType) {
+            case Manual:
+                return getFullName().length() * 100000 + getAge() * 10000 + getSalary() * 100 + getExp() * 10 + 2;
+            case Autamatic:
+                return getFullName().length() * 100000 + getAge() * 10000 + getSalary() * 100 + getExp() * 10 + 5;
+            default:
+                return getFullName().length() * 100000 + getAge() * 10000 + getSalary() * 100 + getExp() * 10;
+        }
+    }
+
+    public TestType getTestType() {
+        return testType;
+    }
+
+    public void setTestType(TestType testType) {
+        this.testType = testType;
+    }
 }
