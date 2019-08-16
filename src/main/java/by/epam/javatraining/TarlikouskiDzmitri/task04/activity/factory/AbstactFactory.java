@@ -5,7 +5,7 @@ import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableType
 
 public abstract class AbstactFactory {
 
-    public abstract Employee build(String[] str) throws NotAvailableTypeOfEmployee;
+    public abstract Employee build(String[] str);
 
     public void fill(String[] str, Employee employee) {
 

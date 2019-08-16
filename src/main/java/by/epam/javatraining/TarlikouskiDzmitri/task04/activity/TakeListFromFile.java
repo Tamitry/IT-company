@@ -34,10 +34,11 @@ public class TakeListFromFile {
      *
      * @param path - path to resource file
      */
-    public String[] importText(String path) throws IOException{
+    /*public String[] importText(String path) throws IOException{
 
         FileReader fw = new FileReader(path);
 
-    }
+
+    }*/
 
 }

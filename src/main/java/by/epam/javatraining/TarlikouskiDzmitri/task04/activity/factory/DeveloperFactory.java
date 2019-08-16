@@ -7,7 +7,7 @@ import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableType
 public class DeveloperFactory extends AbstactFactory {
 
     @Override
-    public Developer build(String[] str) throws NotAvailableTypeOfEmployee {
+    public Developer build(String[] str){
 
         Developer dev = new Developer();
         fill(str,dev);
@@ -16,7 +16,7 @@ public class DeveloperFactory extends AbstactFactory {
         return dev;
     }
 
-    private void setLanguage(String[] str, Developer dev) throws NotAvailableTypeOfEmployee{
+    private void setLanguage(String[] str, Developer dev){
 
         try {
             switch (str[5]) {
@@ -30,7 +30,7 @@ public class DeveloperFactory extends AbstactFactory {
                     dev.setLanguage(Languages.Python);
                     break;
                 default:
-                    throw new NotAvailableTypeOfEmployee("Incorrect programming language.");
+                    throw new NotAvailableTypeOfEmployee("Incorrect programmer's language.");
             }
         }
 
