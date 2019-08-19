@@ -11,34 +11,58 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity;
 
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.department.TeamMembers;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.*;
+import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.validation.Validator;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TakeListFromFile {
 
     private Validator validator;
-    private TeamMembers teamMembers;
 
     public TakeListFromFile() {
 
         validator = new Validator();
-        teamMembers = new TeamMembers();
 
     }
 
     /**
-     *
+     *Take text from files and check it with validate(). Return list with all valid lines.
      *
      * @param path - path to resource file
+     * @return ArrayList - with all valid lines.
      */
-    /*public String[] importText(String path) throws IOException{
+    public ArrayList<String> importText(String path){
 
-        FileReader fw = new FileReader(path);
+        ArrayList<String> strToImport = new ArrayList<String>();
+
+        try {
+            FileReader fr = new FileReader(path);
+            Scanner sc = new Scanner(fr);
+
+            while (sc.hasNext()) {
+
+                String str = sc.nextLine();
+                if(validator.validate(str)) {
+                    strToImport.add(str);
+                }
+            }
+
+        }
+        catch (NotAvailableTypeOfEmployee ex) {
+            System.out.println(ex.getMessage());
+        }
+        catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
 
 
-    }*/
+        return strToImport;
+    }
 
 }
