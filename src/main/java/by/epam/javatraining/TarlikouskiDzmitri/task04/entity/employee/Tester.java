@@ -3,7 +3,8 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.TestType;
 
 /**
- * Class of testers. There can be other methods, but now it just has
+ * Class of testers. There can be other methods, but now it just has a new field.
+ *
  * @author Dzmitri Tarlikovski
  * date 05.08.2019
  * @version  1.0
@@ -11,7 +12,7 @@ import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.TestType;
 
 public class Tester extends Employee {
 
-    TestType testType;
+    private TestType testType;
 
     public Tester() {
 
@@ -51,9 +52,9 @@ public class Tester extends Employee {
     public int hashCode() {
 
         switch (testType) {
-            case Manual:
+            case MANUAL:
                 return getFullName().length() * 100000 + getAge() * 10000 + getSalary() * 100 + getExp() * 10 + 2;
-            case Autamatic:
+            case AUTOMATIC:
                 return getFullName().length() * 100000 + getAge() * 10000 + getSalary() * 100 + getExp() * 10 + 5;
             default:
                 return getFullName().length() * 100000 + getAge() * 10000 + getSalary() * 100 + getExp() * 10;

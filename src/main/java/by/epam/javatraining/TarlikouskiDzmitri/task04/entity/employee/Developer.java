@@ -3,7 +3,8 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.Languages;
 
 /**
- * Class of developers. There can be other methods, but now it just has
+ * Class of developers. There can be other methods, but now it just has a new field.
+ *
  * @author Dzmitri Tarlikovski
  * date 05.08.2019
  * @version  1.0
@@ -51,11 +52,11 @@ public class Developer extends Employee {
     public int hashCode() {
 
         switch (language) {
-            case C:
+            case RUBY:
                 return getFullName().length()*100000+getAge()*10000+getSalary()*100+getExp()*10+2;
-            case Java:
+            case JAVA:
                 return getFullName().length()*100000+getAge()*10000+getSalary()*100+getExp()*10+5;
-            case Python:
+            case PYTHON:
                 return getFullName().length()*100000+getAge()*10000+getSalary()*100+getExp()*10+8;
             default:
                 return getFullName().length()*100000+getAge()*10000+getSalary()*100+getExp()*10;

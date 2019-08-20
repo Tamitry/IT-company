@@ -1,5 +1,13 @@
 package by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory;
 
+/**
+ * One of the factory elements.
+ *
+ * @author DzmitriyTarlikouski
+ * date 16.08.2019
+ * @version 1.0
+ */
+
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Employee;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
 

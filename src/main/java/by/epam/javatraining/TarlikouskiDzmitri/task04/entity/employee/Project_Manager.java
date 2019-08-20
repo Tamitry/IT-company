@@ -1,7 +1,8 @@
 package by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee;
 
 /**
- * Class of project managers. There can be other methods, but now it just has
+ * Class of project managers. There can be other methods, but now it just has a new field.
+ *
  * @author Dzmitri Tarlikovski
  * date 05.08.2019
  * @version  1.0

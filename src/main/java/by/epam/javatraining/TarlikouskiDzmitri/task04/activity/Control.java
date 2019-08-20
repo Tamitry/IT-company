@@ -1,9 +1,15 @@
 package by.epam.javatraining.TarlikouskiDzmitri.task04.activity;
 
-import by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory.AbstactFactory;
+/**
+ * This class ties all elements together and return ready list of employees.
+ *
+ * @author DzmitriyTarlikouski
+ * date 16.08.2019
+ * @version 1.0
+ */
+
 import by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory.EmployeeFactory;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.department.TeamMembers;
-import com.sun.deploy.util.ArrayUtil;
 
 import java.util.ArrayList;
 
