@@ -60,7 +60,7 @@ public final class Validator {
             return false;
         }
 
-        if(!sepStr[5].matches("[a-zA-Z]+")) {
+        if(!sepStr[5].matches("[a-zA-Z ]+")) {
             return false;
         }
 

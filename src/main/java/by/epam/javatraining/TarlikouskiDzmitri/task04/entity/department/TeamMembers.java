@@ -49,7 +49,7 @@ public class TeamMembers {
         String str = "List of employees: \n";
 
         for (Employee employee:employees) {
-            str = str + employee.toString();
+            str = str + employee.toString()+"\n";
         }
 
         return str;

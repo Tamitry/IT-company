@@ -30,12 +30,12 @@ public class SortClass {
 
         int size = teamMembers.numberOfEmployees();
 
-        for(int i=0;i<size-1;i++) {
-            for(int j=i+1;j<size;j++) {
-                if(comparator.compare(teamMembers.getEmployee(j-1),teamMembers.getEmployee(j))>1) {
-                    Employee temp = teamMembers.getEmployee(j-1);
-                    teamMembers.setEmployees(j-1, teamMembers.getEmployee(j));
-                    teamMembers.setEmployees(j,temp);
+        for(int i=size-1;i>0;i--) {
+            for(int j=0;j<i;j++) {
+                if(comparator.compare(teamMembers.getEmployee(j),teamMembers.getEmployee(j+1))>0) {
+                    Employee temp = teamMembers.getEmployee(j);
+                    teamMembers.setEmployees(j, teamMembers.getEmployee(j+1));
+                    teamMembers.setEmployees(j+1,temp);
                 }
             }
         }
