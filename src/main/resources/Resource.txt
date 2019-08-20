@@ -1,5 +1,5 @@
-Aleksei Ewart, 24, 3, 1000, manual, tester
-Ivan Dayan, 21, 1, 1100, autamatic, tester
+Aleksei Ewart, 24, 3, 1000, Manual, tester
+Ivan Dayan, 21, 1, 1100, Autamatic, tester
 Nicholas Watson, 30, 6, 600, tester
 Augustus Warner, 22, 3, 750, developer
 Edward Porter, 20, 3, 1250, developer

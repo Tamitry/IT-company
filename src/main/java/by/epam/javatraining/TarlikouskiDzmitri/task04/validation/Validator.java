@@ -36,6 +36,10 @@ public final class Validator {
             return false;
         }
 
+        if(!(sepStr[5].equals("tester")||sepStr[5].equals("developer")||sepStr[5].equals("project manager"))) {
+            return false;
+        }
+
         if(!sepStr[0].matches("[a-zA-Z]+.+[a-zA-Z]+")) {
             return false;
         }
