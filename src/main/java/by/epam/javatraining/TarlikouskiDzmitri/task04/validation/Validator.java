@@ -1,5 +1,8 @@
 package by.epam.javatraining.TarlikouskiDzmitri.task04.validation;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Static class for сhecking value of various class fields.
  *
@@ -10,6 +13,8 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.validation;
 
 
 public final class Validator {
+
+    private static final Logger LOGGER = LogManager.getLogger(Validator.class);
 
     public Validator() {
 
@@ -87,7 +92,8 @@ public final class Validator {
         }
         catch (NumberFormatException ex) {
 
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
+            return false;
 
         }
 

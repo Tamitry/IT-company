@@ -10,9 +10,12 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory;
 
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Project_Manager;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ProjectManagerFactory extends AbstactFactory{
 
+    private static final Logger LOGGER = LogManager.getLogger(ProjectManagerFactory.class);
 
     /**
      * Return new project manager with given parameters.
@@ -33,7 +36,7 @@ public class ProjectManagerFactory extends AbstactFactory{
             }
         }
         catch (NotAvailableTypeOfEmployee ex) {
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
         }
         return pm;
     }

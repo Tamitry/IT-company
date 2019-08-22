@@ -10,8 +10,12 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory;
 
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Employee;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.FactoryException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EmployeeFactory {
+
+    private static final Logger LOGGER = LogManager.getLogger(EmployeeFactory.class);
 
     public EmployeeFactory() {
 
@@ -43,7 +47,7 @@ public class EmployeeFactory {
             }
         }
         catch (FactoryException ex){
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
         }
 
         Employee employee = null;

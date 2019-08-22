@@ -11,9 +11,12 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Tester;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.TestType;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class TesterFactory extends AbstactFactory {
 
+    private static final Logger LOGGER = LogManager.getLogger(TesterFactory.class);
 
     /**
      * Return new tester with given parameters.
@@ -46,7 +49,7 @@ public class TesterFactory extends AbstactFactory {
                 }
         }
         catch (NotAvailableTypeOfEmployee ex) {
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
         }
     }
 }

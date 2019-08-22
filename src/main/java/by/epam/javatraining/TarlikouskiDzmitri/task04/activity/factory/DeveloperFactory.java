@@ -11,10 +11,12 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Developer;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.Languages;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DeveloperFactory extends AbstactFactory {
 
-
+    private static final Logger LOGGER = LogManager.getLogger(DeveloperFactory.class);
     /**
      * Return new developer with given parameters.
      *
@@ -56,7 +58,7 @@ public class DeveloperFactory extends AbstactFactory {
         }
 
         catch (NotAvailableTypeOfEmployee ex) {
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
         }
     }
 }

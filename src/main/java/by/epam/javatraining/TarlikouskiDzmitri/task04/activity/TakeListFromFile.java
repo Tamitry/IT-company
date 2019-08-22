@@ -10,6 +10,8 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity;
  */
 
 import by.epam.javatraining.TarlikouskiDzmitri.task04.validation.Validator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,6 +22,7 @@ import java.util.Scanner;
 public class TakeListFromFile {
 
     private Validator validator;
+    private static final Logger LOGGER = LogManager.getLogger(TakeListFromFile.class);
 
     public TakeListFromFile() {
 
@@ -51,10 +54,10 @@ public class TakeListFromFile {
 
         }
         catch (FileNotFoundException ex) {
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
         }
         catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            LOGGER.error(ex.getMessage());
         }
 
 
