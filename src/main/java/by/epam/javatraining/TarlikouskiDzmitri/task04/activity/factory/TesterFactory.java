@@ -12,7 +12,7 @@ import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Tester;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.enums.TestType;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
 
-public class TesterBuilder extends AbstactFactory {
+public class TesterFactory extends AbstactFactory {
 
 
     /**

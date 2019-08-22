@@ -9,12 +9,11 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity;
  * @version  1.0
  */
 
-import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.department.TeamMembers;
-import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.*;
-import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.validation.Validator;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -50,9 +49,6 @@ public class TakeListFromFile {
                 }
             }
 
-        }
-        catch (NotAvailableTypeOfEmployee ex) {
-            System.out.println(ex.getMessage());
         }
         catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());

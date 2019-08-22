@@ -33,10 +33,10 @@ public class EmployeeFactory {
                     abstactFactory = new DeveloperFactory();
                     break;
                 case "tester":
-                    abstactFactory = new TesterBuilder();
+                    abstactFactory = new TesterFactory();
                     break;
                 case "project manager":
-                    abstactFactory = new ProjectManagerBuilder();
+                    abstactFactory = new ProjectManagerFactory();
                     break;
                 default:
                     throw new FactoryException("There is no such occupation.");

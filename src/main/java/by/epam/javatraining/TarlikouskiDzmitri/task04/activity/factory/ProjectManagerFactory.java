@@ -9,10 +9,9 @@ package by.epam.javatraining.TarlikouskiDzmitri.task04.activity.factory;
  */
 
 import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Project_Manager;
-import by.epam.javatraining.TarlikouskiDzmitri.task04.entity.employee.Tester;
 import by.epam.javatraining.TarlikouskiDzmitri.task04.exception.NotAvailableTypeOfEmployee;
 
-public class ProjectManagerBuilder extends AbstactFactory{
+public class ProjectManagerFactory extends AbstactFactory{
 
 
     /**

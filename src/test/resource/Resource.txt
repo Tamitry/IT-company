@@ -1,0 +1,5 @@
+Aleksei Ewart, 24, 3, 1000, Manual, tester
+Ivan Dayan, 21, 1, 1100, Automatic, tester
+Nicholas Watson, 30, 6, 600, Automatic, tester
+Maxim Machina , 125, 126, 3000000, 124, project manager
+./src/test/resource/Resource.txt
