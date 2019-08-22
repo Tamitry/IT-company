@@ -1,0 +1,11 @@
+Aleksei Ewart, 24, 3, 1000, Manual, tester
+Ivan Dayan, 21, 1, 1100, Automatic, tester
+Nicholas Watson, 30, 6, 600, Automatic, tester
+Augustus Warner, 22, 3, 750, Java, developer
+Edward Porter, 20, 3, 1250, Java, developer
+Beverly Garrison, 25, 3, 800, Ruby, developer
+William Chase, 22, 3, 1700, 4, project manager
+Walter Adams, 33, 3, 3000, Java, developer
+Melina Wilkerson, 24, 3, 950, Python, developer
+
+./src/main/resources/Resource.txt
